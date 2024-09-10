@@ -14,4 +14,9 @@ export class BookmarkService {
     const books = await this.bookModel.find();
     return books;
   }
+
+  async createBookmark(bookmark: BookmarkSchema): Promise<BookmarkSchema> {
+    const response = await this.bookModel.create(bookmark);
+    return response;
+  }
 }
