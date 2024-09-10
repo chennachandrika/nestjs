@@ -7,7 +7,9 @@ export enum Category {
   FANTASY = 'Fantasy',
 }
 
-@Schema()
+@Schema({
+  timestamps: true,
+})
 export class BookmarkSchema {
   @Prop()
   title: string;
